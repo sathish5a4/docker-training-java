@@ -1,0 +1,308 @@
+training-machine5@training-machine5:~$ pwd
+/home/training-machine5
+training-machine5@training-machine5:~$ cd docker-training-java/
+training-machine5@training-machine5:~/docker-training-java$ cd s
+spring-boot/ standalone/  
+training-machine5@training-machine5:~/docker-training-java$ cd standalone/
+training-machine5@training-machine5:~/docker-training-java/standalone$ sh data/run.sh
+sh: 0: Can't open data/run.sh
+training-machine5@training-machine5:~/docker-training-java/standalone$ sh data/run.sh
+Hello vasantha ....... Running run.sh file - Wed Aug 21 12:43:51 IST 2019
+training-machine5@training-machine5:~/docker-training-java/standalone$ clear
+training-machine5@training-machine5:~/docker-training-java/standalone$ nano data/run.sh
+training-machine5@training-machine5:~/docker-training-java/standalone$ sh data/run.sh
+data/run.sh: 2: data/run.sh: Syntax error: Unterminated quoted string
+training-machine5@training-machine5:~/docker-training-java/standalone$ sh data/run.sh
+Hello Docker running from run.sh - Wed Aug 21 12:47:20 IST 2019
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker run -d --name java8-app-c1 java8-app
+docker: Error response from daemon: Conflict. The container name "/java8-app-c1" is already in use by container "d152dd0ad831513589fea941453215f8865d2f1642ef40a4bde48af1dcf612c5". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS               NAMES
+db64a59e4931        java8-app123        "java -jar /standalo…"   44 minutes ago      Exited (130) 42 minutes ago                       wizardly_ride
+2059a0081b2e        java8-app           "java -jar /standalo…"   24 hours ago        Up 24 hours                                       festive_mahavira
+0a6613916504        java8-app           "java -jar /standalo…"   24 hours ago        Up 24 hours                                       competent_davinci
+5b52603c7a3e        java8-app           "java -jar /standalo…"   24 hours ago        Up 24 hours                                       frosty_beaver
+a12287d73cc7        java8-app           "java -jar /standalo…"   24 hours ago        Exited (130) 23 hours ago                         java8-app-c2
+d152dd0ad831        java8-app           "java -jar /standalo…"   24 hours ago        Exited (130) 24 hours ago                         java8-app-c1
+efb62ef35ea9        hello-world         "/hello"                 24 hours ago        Exited (0) 24 hours ago                           silly_chaplygin
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker run -d --name java8-app-data java8-app
+8f5185e1a9a953c2666737a547d11712274ee7aa21c50b0f6c28efa5aa13b359
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker cp data/ java8-app--data/data
+must specify at least one container source
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker cp data/ java8-app-data/data
+must specify at least one container source
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker kill db64a59e4931
+Error response from daemon: Cannot kill container: db64a59e4931: Container db64a59e49318c761181cf9d69388a1e4e783b80b6b73b71e8ed4278ddc83d4a is not running
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker container rm *
+Error: No such container: data
+Error: No such container: docker-compose.yml
+Error: No such container: Dockerfile
+Error: No such container: Dockerfile-10
+Error: No such container: Dockerfile-11
+Error: No such container: Dockerfile-9
+Error: No such container: pom.xml
+Error: No such container: src
+Error: No such container: target
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker container rm db64a59e4931
+db64a59e4931
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+8f5185e1a9a9        java8-app           "java -jar /standalo…"   6 minutes ago       Up 6 minutes                                    java8-app-data
+2059a0081b2e        java8-app           "java -jar /standalo…"   24 hours ago        Up 24 hours                                     festive_mahavira
+0a6613916504        java8-app           "java -jar /standalo…"   24 hours ago        Up 24 hours                                     competent_davinci
+5b52603c7a3e        java8-app           "java -jar /standalo…"   24 hours ago        Up 24 hours                                     frosty_beaver
+a12287d73cc7        java8-app           "java -jar /standalo…"   24 hours ago        Exited (130) 23 hours ago                       java8-app-c2
+d152dd0ad831        java8-app           "java -jar /standalo…"   24 hours ago        Exited (130) 24 hours ago                       java8-app-c1
+efb62ef35ea9        hello-world         "/hello"                 24 hours ago        Exited (0) 24 hours ago                         silly_chaplygin
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker container rm 8f5185e1a9a9 2059a0081b2e 0a6613916504
+Error response from daemon: You cannot remove a running container 8f5185e1a9a953c2666737a547d11712274ee7aa21c50b0f6c28efa5aa13b359. Stop the container before attempting removal or force remove
+Error response from daemon: You cannot remove a running container 2059a0081b2e3cbeadb8137d6065f43126af0496dc3e9cb3ba146ba4617a8e9d. Stop the container before attempting removal or force remove
+Error response from daemon: You cannot remove a running container 0a661391650413453e26b46e111b86834495f0d9dc2d218b8abcd44b64526a64. Stop the container before attempting removal or force remove
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker system prune
+WARNING! This will remove:
+        - all stopped containers
+        - all networks not used by at least one container
+        - all dangling images
+        - all dangling build cache
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+a12287d73cc7c4b952321a3cdc9c7ad60c856e1836839ba013cd806b65da3e91
+d152dd0ad831513589fea941453215f8865d2f1642ef40a4bde48af1dcf612c5
+efb62ef35ea98ebcd446b063c9b20ac2dcd0d2b82d55b7167473a855979c2136
+
+Total reclaimed space: 0B
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+8f5185e1a9a9        java8-app           "java -jar /standalo…"   7 minutes ago       Up 7 minutes                            java8-app-data
+2059a0081b2e        java8-app           "java -jar /standalo…"   24 hours ago        Up 24 hours                             festive_mahavira
+0a6613916504        java8-app           "java -jar /standalo…"   24 hours ago        Up 24 hours                             competent_davinci
+5b52603c7a3e        java8-app           "java -jar /standalo…"   24 hours ago        Up 24 hours                             frosty_beaver
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker container rm 8f5185e1a9a9
+Error response from daemon: You cannot remove a running container 8f5185e1a9a953c2666737a547d11712274ee7aa21c50b0f6c28efa5aa13b359. Stop the container before attempting removal or force remove
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker stop ^C
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker stop 8f5185e1a9a9
+8f5185e1a9a9
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker stop 2059a0081b2e 0a6613916504 5b52603c7a3e
+2059a0081b2e
+0a6613916504
+5b52603c7a3e
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS               NAMES
+8f5185e1a9a9        java8-app           "java -jar /standalo…"   9 minutes ago       Exited (143) 34 seconds ago                       java8-app-data
+2059a0081b2e        java8-app           "java -jar /standalo…"   24 hours ago        Exited (143) 8 seconds ago                        festive_mahavira
+0a6613916504        java8-app           "java -jar /standalo…"   24 hours ago        Exited (143) 8 seconds ago                        competent_davinci
+5b52603c7a3e        java8-app           "java -jar /standalo…"   24 hours ago        Exited (143) 8 seconds ago                        frosty_beaver
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker container rm 
+"docker container rm" requires at least 1 argument.
+See 'docker container rm --help'.
+
+Usage:  docker container rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker stop 2059a0081b2e 0a6613916504 5b52603c7a3e
+2059a0081b2e
+0a6613916504
+5b52603c7a3e
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker container rm 2059a0081b2e 0a6613916504 5b52603c7a3e
+2059a0081b2e
+0a6613916504
+5b52603c7a3e
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                            PORTS               NAMES
+8f5185e1a9a9        java8-app           "java -jar /standalo…"   10 minutes ago      Exited (143) About a minute ago                       java8-app-data
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker container rm 8f5185e1a9a9
+8f5185e1a9a9
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker run -d --name java8-data java8-app
+53c0865741549862c0cc9d63c572bd3e80cd9071369e95b6327f6378b08bc0f4
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+53c086574154        java8-app           "java -jar /standalo…"   5 seconds ago       Up 3 seconds                            java8-data
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker cp data/ java8-data:/data
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker exec -it java8-data bash
+root@53c086574154:/# ls -1
+bin
+boot
+data
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+standalone-1.0.jar
+sys
+tmp
+usr
+var
+root@53c086574154:/# ls -1 data
+run-1.sh
+run.sh
+root@53c086574154:/# ls -l data
+total 8
+-rw-r--r-- 1 1000 1000 60 Aug 21 07:11 run-1.sh
+-rw-r--r-- 1 1000 1000 50 Aug 21 07:17 run.sh
+root@53c086574154:/# cat data/run.sh
+echo 'Hello Docker running from run.sh - '$(date)
+root@53c086574154:/# ^C
+root@53c086574154:/# ^C
+root@53c086574154:/# exit
+exit
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker build -t java8-app .
+Sending build context to Docker daemon   51.2kB
+Step 1/4 : FROM openjdk:8
+ ---> 08ded5f856cc
+Step 2/4 : ADD target/standalone-1.0.jar /standalone-1.0.jar
+ ---> Using cache
+ ---> a43b4d69b12e
+Step 3/4 : copy data .
+ ---> c30c81683c6c
+Step 4/4 : CMD ["java","-jar","/standalone-1.0.jar"]
+ ---> Running in 1336da8d624e
+Removing intermediate container 1336da8d624e
+ ---> 2db9e69574a6
+Successfully built 2db9e69574a6
+Successfully tagged java8-app:latest
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker rm -f java8-data 
+java8-data
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker run -d --name java8-data java8-app
+3ba3d271b698c04a3baef2fd470c4d484fcdee4320466cf656943434677b3ea8
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker exec -it java8-data bash
+root@3ba3d271b698:/# ls -1 data
+ls: cannot access 'data': No such file or directory
+root@3ba3d271b698:/# ls -l data
+ls: cannot access 'data': No such file or directory
+root@3ba3d271b698:/# ls -l
+total 84
+-rw-r--r--   1 root root   60 Aug 21 07:46 add.sh
+-rw-r--r--   1 root root  220 Aug 21 07:48 add.tar.xz
+drwxr-xr-x   1 root root 4096 Aug 14 11:23 bin
+drwxr-xr-x   2 root root 4096 Mar 28 09:12 boot
+drwxr-xr-x   5 root root  340 Aug 21 07:53 dev
+drwxr-xr-x   1 root root 4096 Aug 21 07:53 etc
+drwxr-xr-x   2 root root 4096 Mar 28 09:12 home
+drwxr-xr-x   1 root root 4096 Aug 12 00:00 lib
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 lib64
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 media
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 mnt
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 opt
+dr-xr-xr-x 276 root root    0 Aug 21 07:53 proc
+drwx------   1 root root 4096 Aug 14 11:25 root
+drwxr-xr-x   3 root root 4096 Aug 12 00:00 run
+-rw-r--r--   1 root root   50 Aug 21 07:17 run.sh
+drwxr-xr-x   1 root root 4096 Aug 14 06:24 sbin
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 srv
+-rw-r--r--   1 root root 2996 Aug 20 07:14 standalone-1.0.jar
+dr-xr-xr-x  13 root root    0 Aug 21 07:53 sys
+drwxrwxrwt   1 root root 4096 Aug 14 11:25 tmp
+drwxr-xr-x   1 root root 4096 Aug 12 00:00 usr
+drwxr-xr-x   1 root root 4096 Aug 12 00:00 var
+root@3ba3d271b698:/# cat exit
+cat: exit: No such file or directory
+root@3ba3d271b698:/# exit
+exit
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker build -t java8-app .
+Sending build context to Docker daemon  52.22kB
+Step 1/4 : FROM openjdk:8
+ ---> 08ded5f856cc
+Step 2/4 : ADD target/standalone-1.0.jar /standalone-1.0.jar
+ ---> Using cache
+ ---> a43b4d69b12e
+Step 3/4 : copy data .
+ ---> 7b36524c6a75
+Step 4/4 : CMD ["java","-jar","/standalone-1.0.jar"]
+ ---> Running in ea4a2d7f2d28
+Removing intermediate container ea4a2d7f2d28
+ ---> 00fdb5c43be6
+Successfully built 00fdb5c43be6
+Successfully tagged java8-app:latest
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker rm -f java8-data 
+java8-data
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker run -d --name java8-data java8-app
+df864416aea269bef98f7981be69bce9eac7982fdb785e863d38e2793fc7aca9
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker exec -it java8-data bash
+root@df864416aea2:/# ls -l
+total 76
+-rw-r--r--   1 root root  247 Aug 21 07:55 add_2.zip
+drwxr-xr-x   1 root root 4096 Aug 14 11:23 bin
+drwxr-xr-x   2 root root 4096 Mar 28 09:12 boot
+drwxr-xr-x   5 root root  340 Aug 21 07:56 dev
+drwxr-xr-x   1 root root 4096 Aug 21 07:56 etc
+drwxr-xr-x   2 root root 4096 Mar 28 09:12 home
+drwxr-xr-x   1 root root 4096 Aug 12 00:00 lib
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 lib64
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 media
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 mnt
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 opt
+dr-xr-xr-x 276 root root    0 Aug 21 07:56 proc
+drwx------   1 root root 4096 Aug 14 11:25 root
+drwxr-xr-x   3 root root 4096 Aug 12 00:00 run
+drwxr-xr-x   1 root root 4096 Aug 14 06:24 sbin
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 srv
+-rw-r--r--   1 root root 2996 Aug 20 07:14 standalone-1.0.jar
+dr-xr-xr-x  13 root root    0 Aug 21 07:53 sys
+drwxrwxrwt   1 root root 4096 Aug 14 11:25 tmp
+drwxr-xr-x   1 root root 4096 Aug 12 00:00 usr
+drwxr-xr-x   1 root root 4096 Aug 12 00:00 var
+root@df864416aea2:/# exit
+exit
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker build -t java8-app .
+Sending build context to Docker daemon   51.2kB
+Step 1/4 : FROM openjdk:8
+ ---> 08ded5f856cc
+Step 2/4 : ADD target/standalone-1.0.jar /standalone-1.0.jar
+ ---> Using cache
+ ---> a43b4d69b12e
+Step 3/4 : ADD data/add.tar.xz .
+ ---> 6c9df01f0c6c
+Step 4/4 : CMD ["java","-jar","/standalone-1.0.jar"]
+ ---> Running in fc8945d0f52d
+Removing intermediate container fc8945d0f52d
+ ---> bcfd9b6b1420
+Successfully built bcfd9b6b1420
+Successfully tagged java8-app:latest
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker rm -f java8-data 
+java8-data
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker run -d --name java8-data java8-app
+f822eae268504c7f09778b4af86bb483ba1fb0f39c5b15a1ba333306b2f0cc1a
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker exec -it java8-data bash
+root@f822eae26850:/# ls -l
+total 76
+-rw-r--r--   1 1000 1000   60 Aug 21 07:46 add (copy).sh
+drwxr-xr-x   1 root root 4096 Aug 14 11:23 bin
+drwxr-xr-x   2 root root 4096 Mar 28 09:12 boot
+drwxr-xr-x   5 root root  340 Aug 21 07:59 dev
+drwxr-xr-x   1 root root 4096 Aug 21 07:59 etc
+drwxr-xr-x   2 root root 4096 Mar 28 09:12 home
+drwxr-xr-x   1 root root 4096 Aug 12 00:00 lib
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 lib64
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 media
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 mnt
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 opt
+dr-xr-xr-x 277 root root    0 Aug 21 07:59 proc
+drwx------   1 root root 4096 Aug 14 11:25 root
+drwxr-xr-x   3 root root 4096 Aug 12 00:00 run
+drwxr-xr-x   1 root root 4096 Aug 14 06:24 sbin
+drwxr-xr-x   2 root root 4096 Aug 12 00:00 srv
+-rw-r--r--   1 root root 2996 Aug 20 07:14 standalone-1.0.jar
+dr-xr-xr-x  13 root root    0 Aug 21 07:53 sys
+drwxrwxrwt   1 root root 4096 Aug 14 11:25 tmp
+drwxr-xr-x   1 root root 4096 Aug 12 00:00 usr
+drwxr-xr-x   1 root root 4096 Aug 12 00:00 var
+root@f822eae26850:/# exit
+exit
+training-machine5@training-machine5:~/docker-training-java/standalone$ 
+

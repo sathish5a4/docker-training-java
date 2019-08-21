@@ -1,0 +1,1081 @@
+training-machine5@training-machine5:~$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+training-machine5@training-machine5:~$ git clone https://github.com/VamukaGit/docker-training-java.git
+Cloning into 'docker-training-java'...
+remote: Enumerating objects: 132, done.
+remote: Counting objects: 100% (132/132), done.
+remote: Compressing objects: 100% (91/91), done.
+remote: Total 132 (delta 31), reused 73 (delta 12), pack-reused 0
+Receiving objects: 100% (132/132), 579.89 KiB | 226.00 KiB/s, done.
+Resolving deltas: 100% (31/31), done.
+training-machine5@training-machine5:~$ pwd
+/home/training-machine5
+training-machine5@training-machine5:~$ -l
+-l: command not found
+training-machine5@training-machine5:~$ cd docker-
+docker-java-setup/    docker-training-java/ 
+training-machine5@training-machine5:~$ cd docker-
+docker-java-setup/    docker-training-java/ 
+training-machine5@training-machine5:~$ cd docker-training-java/
+training-machine5@training-machine5:~/docker-training-java$ ls -1
+docker-cheatsheet.pdf
+k8s-cheatsheet.pdf
+README.md
+spring-boot
+standalone
+training-machine5@training-machine5:~/docker-training-java$ ls -l
+total 684
+-rw-r--r-- 1 training-machine5 training-machine5 231866 Aug 20 12:23 docker-cheatsheet.pdf
+-rw-r--r-- 1 training-machine5 training-machine5 454573 Aug 20 12:23 k8s-cheatsheet.pdf
+-rw-r--r-- 1 training-machine5 training-machine5   3667 Aug 20 12:23 README.md
+drwxr-xr-x 3 training-machine5 training-machine5   4096 Aug 20 12:23 spring-boot
+drwxr-xr-x 5 training-machine5 training-machine5   4096 Aug 20 12:23 standalone
+training-machine5@training-machine5:~/docker-training-java$ cd s
+spring-boot/ standalone/  
+training-machine5@training-machine5:~/docker-training-java$ cd standalone/
+training-machine5@training-machine5:~/docker-training-java/standalone$ mvn clean compile jar:jar
+
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom (3.9 kB at 2.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/22/maven-plugins-22.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/22/maven-plugins-22.pom (13 kB at 29 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/21/maven-parent-21.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/21/maven-parent-21.pom (26 kB at 31 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/10/apache-10.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/10/apache-10.pom (15 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.jar (25 kB at 18 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom (8.1 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom (9.2 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom (30 kB at 27 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom (15 kB at 21 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar (30 kB at 18 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom (5.8 kB at 6.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar (34 kB at 21 kB/s)
+[INFO] 
+[INFO] ----------------------< zama.training:standalone >----------------------
+[INFO] Building Standalone java app 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.pom (10 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/24/maven-plugins-24.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/24/maven-plugins-24.pom (11 kB at 10 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom (33 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom (14 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.jar (43 kB at 28 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ standalone ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.pom (1.5 kB at 5.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/2.0.6/maven-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/2.0.6/maven-2.0.6.pom (9.0 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/5/maven-parent-5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/5/maven-parent-5.pom (15 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/3/apache-3.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/3/apache-3.pom (3.4 kB at 8.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.pom (4.1 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/16/spice-parent-16.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/16/spice-parent-16.pom (8.4 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/5/forge-parent-5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/5/forge-parent-5.pom (8.4 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar (13 kB at 20 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.jar (226 kB at 43 kB/s)
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ standalone ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.pom (2.6 kB at 5.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.pom (2.0 kB at 6.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.pom (3.0 kB at 3.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.4.1/plexus-utils-1.4.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.4.1/plexus-utils-1.4.1.pom (1.9 kB at 6.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.11/plexus-1.0.11.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.11/plexus-1.0.11.pom (9.0 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.pom (3.9 kB at 7.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.0.3/plexus-containers-1.0.3.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.0.3/plexus-containers-1.0.3.pom (492 B at 1.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.4/plexus-1.0.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.4/plexus-1.0.4.pom (5.7 kB at 13 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.pom (998 B at 3.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.0.4/plexus-utils-1.0.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.0.4/plexus-utils-1.0.4.pom (6.9 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.pom (3.1 kB at 10 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.pom (2.0 kB at 6.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.pom (2.6 kB at 3.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.pom (1.9 kB at 6.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.pom (1.6 kB at 5.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.pom (1.9 kB at 6.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.pom (6.7 kB at 10 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.pom (1.9 kB at 6.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.pom (1.8 kB at 5.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting/2.0.6/maven-reporting-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting/2.0.6/maven-reporting-2.0.6.pom (1.4 kB at 4.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.pom (424 B at 1.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/1.0-alpha-7/doxia-1.0-alpha-7.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/1.0-alpha-7/doxia-1.0-alpha-7.pom (3.9 kB at 13 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.pom (1.7 kB at 5.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.0/commons-cli-1.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.0/commons-cli-1.0.pom (2.1 kB at 6.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.pom (2.0 kB at 6.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.pom (7.1 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.pom (1.3 kB at 4.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1/classworlds-1.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1/classworlds-1.1.pom (3.3 kB at 11 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.pom (3.3 kB at 11 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.6/plexus-2.0.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.6/plexus-2.0.6.pom (17 kB at 22 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.pom (5.8 kB at 6.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/17/maven-shared-components-17.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/17/maven-shared-components-17.pom (8.7 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.15/plexus-utils-1.5.15.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.15/plexus-utils-1.5.15.pom (6.8 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.2/plexus-2.0.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.2/plexus-2.0.2.pom (12 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.12/plexus-interpolation-1.12.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.12/plexus-interpolation-1.12.pom (889 B at 2.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.14/plexus-components-1.1.14.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.14/plexus-components-1.1.14.pom (5.8 kB at 13 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.pom (2.9 kB at 3.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/10/spice-parent-10.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/10/spice-parent-10.pom (3.0 kB at 9.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/3/forge-parent-3.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/3/forge-parent-3.pom (5.0 kB at 7.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.pom (8.1 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.pom (890 B at 2.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.15/plexus-components-1.1.15.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.15/plexus-components-1.1.15.pom (2.8 kB at 9.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.3/plexus-2.0.3.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.3/plexus-2.0.3.pom (15 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.jar (29 kB at 27 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar (35 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.jar (57 kB at 39 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar (21 kB at 13 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar (9.9 kB at 5.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar (5.9 kB at 2.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.0/commons-cli-1.0.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar (14 kB at 5.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar (24 kB at 9.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.0/commons-cli-1.0.jar (30 kB at 8.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1/classworlds-1.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar (13 kB at 3.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar (37 kB at 9.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar (152 kB at 36 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1/classworlds-1.1.jar (38 kB at 8.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar (10 kB at 2.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar (87 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.jar (116 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar (49 kB at 8.0 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar (86 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.jar (6.8 kB at 1.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar (43 kB at 5.7 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar (61 kB at 6.7 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar (121 kB at 13 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar (194 kB at 17 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar (223 kB at 19 kB/s)
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ standalone ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.pom (1.5 kB at 5.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/2.0.9/maven-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/2.0.9/maven-2.0.9.pom (19 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/8/maven-parent-8.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/8/maven-parent-8.pom (24 kB at 27 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/4/apache-4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/4/apache-4.pom (4.5 kB at 9.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.pom (1.6 kB at 5.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.pom (2.3 kB at 7.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.pom (7.8 kB at 13 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.pom (2.1 kB at 6.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.pom (3.1 kB at 10 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.pom (2.0 kB at 6.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.pom (2.0 kB at 6.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.pom (1.9 kB at 6.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.pom (1.7 kB at 5.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.pom (2.7 kB at 8.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.pom (2.7 kB at 8.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.pom (2.0 kB at 6.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.pom (2.1 kB at 6.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.pom (1.3 kB at 4.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.pom (3.4 kB at 4.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.pom (4.0 kB at 9.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/18/maven-shared-components-18.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/18/maven-shared-components-18.pom (4.9 kB at 11 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.pom (965 B at 3.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom (4.7 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom (6.4 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.2.1/maven-plugin-api-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.2.1/maven-plugin-api-2.2.1.pom (1.5 kB at 4.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/2.2.1/maven-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/2.2.1/maven-2.2.1.pom (22 kB at 18 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/11/maven-parent-11.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/11/maven-parent-11.pom (32 kB at 18 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/5/apache-5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/5/apache-5.pom (4.1 kB at 9.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.2.1/maven-core-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.2.1/maven-core-2.2.1.pom (12 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.2.1/maven-settings-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.2.1/maven-settings-2.2.1.pom (2.2 kB at 7.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.2.1/maven-model-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.2.1/maven-model-2.2.1.pom (3.2 kB at 11 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.pom (889 B at 3.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.2.1/maven-plugin-parameter-documenter-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.2.1/maven-plugin-parameter-documenter-2.2.1.pom (2.0 kB at 6.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-jdk14/1.5.6/slf4j-jdk14-1.5.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-jdk14/1.5.6/slf4j-jdk14-1.5.6.pom (1.9 kB at 6.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.5.6/slf4j-parent-1.5.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.5.6/slf4j-parent-1.5.6.pom (7.9 kB at 17 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.pom (3.0 kB at 9.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/jcl-over-slf4j/1.5.6/jcl-over-slf4j-1.5.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/jcl-over-slf4j/1.5.6/jcl-over-slf4j-1.5.6.pom (2.2 kB at 7.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1.pom (2.2 kB at 7.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.2.1/maven-artifact-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.2.1/maven-artifact-2.2.1.pom (1.6 kB at 5.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.pom (1.9 kB at 6.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.2.1/maven-error-diagnostics-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.2.1/maven-error-diagnostics-2.2.1.pom (1.7 kB at 5.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.pom (2.8 kB at 9.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.pom (3.1 kB at 3.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.pom (880 B at 2.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1.pom (1.9 kB at 6.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1.pom (2.1 kB at 6.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.2.1/maven-monitor-2.2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.2.1/maven-monitor-2.2.1.pom (1.3 kB at 4.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.pom (3.0 kB at 9.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/12/spice-parent-12.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/12/spice-parent-12.pom (6.8 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/4/forge-parent-4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/4/forge-parent-4.pom (8.4 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.5/plexus-utils-1.5.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.5/plexus-utils-1.5.5.pom (5.1 kB at 5.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.pom (2.1 kB at 6.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom (815 B at 2.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom (4.2 kB at 9.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom (17 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.pom (865 B at 2.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.2/plexus-compiler-2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.2/plexus-compiler-2.2.pom (3.6 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.3.1/plexus-components-1.3.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.3.1/plexus-components-1.3.1.pom (3.1 kB at 10 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3.1/plexus-3.3.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3.1/plexus-3.3.1.pom (20 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/17/spice-parent-17.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/17/spice-parent-17.pom (6.8 kB at 11 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/10/forge-parent-10.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/10/forge-parent-10.pom (14 kB at 18 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.pom (3.1 kB at 10 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.2/plexus-3.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.2/plexus-3.2.pom (19 kB at 17 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.pom (690 B at 2.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.pom (769 B at 2.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.2/plexus-compilers-2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.2/plexus-compilers-2.2.pom (1.2 kB at 4.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.pom (2.8 kB at 9.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.4.5/plexus-utils-1.4.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.4.5/plexus-utils-1.4.5.pom (2.3 kB at 2.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.pom (4.0 kB at 8.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.pom (2.8 kB at 9.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/xbean/xbean/3.4/xbean-3.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/xbean/xbean/3.4/xbean-3.4.pom (19 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/log4j/log4j/1.2.12/log4j-1.2.12.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/log4j/log4j/1.2.12/log4j-1.2.12.pom (145 B at 478 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.pom (5.3 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.pom (2.5 kB at 3.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/google/1/google-1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/google/1/google-1.pom (1.6 kB at 3.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.2/junit-3.8.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.2/junit-3.8.2.pom (747 B at 2.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.jar (13 kB at 9.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.jar (49 kB at 26 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.jar (89 kB at 31 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.jar (21 kB at 7.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.jar (35 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.jar (14 kB at 3.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar (211 kB at 46 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.jar (25 kB at 5.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.jar (160 kB at 33 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.jar (87 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.jar (29 kB at 5.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.jar (10 kB at 1.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.jar (37 kB at 5.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.jar (58 kB at 8.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.jar (33 kB at 4.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar (4.2 kB at 564 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.jar (122 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar (14 kB at 1.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.jar (32 kB at 4.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar (4.6 kB at 567 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar (25 kB at 2.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar (19 kB at 2.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/log4j/log4j/1.2.12/log4j-1.2.12.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.jar (155 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.jar (46 kB at 4.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar (45 kB at 4.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.2/junit-3.8.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.jar (217 kB at 16 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar (134 kB at 9.7 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.2/junit-3.8.2.jar (121 kB at 7.9 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/log4j/log4j/1.2.12/log4j-1.2.12.jar (358 kB at 17 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.jar (640 kB at 24 kB/s)
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/training-machine5/docker-training-java/standalone/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] Source option 5 is no longer supported. Use 6 or later.
+[ERROR] Target option 1.5 is no longer supported. Use 1.6 or later.
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:06 min
+[INFO] Finished at: 2019-08-20T12:30:13+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project standalone: Compilation failure: Compilation failure: 
+[ERROR] Source option 5 is no longer supported. Use 6 or later.
+[ERROR] Target option 1.5 is no longer supported. Use 1.6 or later.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+training-machine5@training-machine5:~/docker-training-java/standalone$ 
+training-machine5@training-machine5:~/docker-training-java/standalone$ java -version
+openjdk version "11.0.4" 2019-07-16
+OpenJDK Runtime Environment (build 11.0.4+11-post-Ubuntu-1ubuntu218.04.3)
+OpenJDK 64-Bit Server VM (build 11.0.4+11-post-Ubuntu-1ubuntu218.04.3, mixed mode, sharing)
+training-machine5@training-machine5:~/docker-training-java/standalone$ sudo update-java-alternatives --list
+[sudo] password for training-machine5: 
+Sorry, try again.
+[sudo] password for training-machine5: 
+java-1.11.0-openjdk-amd64      1111       /usr/lib/jvm/java-1.11.0-openjdk-amd64
+java-1.8.0-openjdk-amd64       1081       /usr/lib/jvm/java-1.8.0-openjdk-amd64
+training-machine5@training-machine5:~/docker-training-java/standalone$ sudo update-java-alternatives --set /usr/lib/jvm/java-1.8.0-openjdk-amd64
+update-alternatives: error: no alternatives for mozilla-javaplugin.so
+update-java-alternatives: plugin alternative does not exist: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/IcedTeaPlugin.so
+training-machine5@training-machine5:~/docker-training-java/standalone$ java -version
+openjdk version "1.8.0_222"
+OpenJDK Runtime Environment (build 1.8.0_222-8u222-b10-1ubuntu1~18.04.1-b10)
+OpenJDK 64-Bit Server VM (build 25.222-b10, mixed mode)
+training-machine5@training-machine5:~/docker-training-java/standalone$ mvn clean compile jar:jar
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< zama.training:standalone >----------------------
+[INFO] Building Standalone java app 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ standalone ---
+[INFO] Deleting /home/training-machine5/docker-training-java/standalone/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ standalone ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ standalone ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/training-machine5/docker-training-java/standalone/target/classes
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-cli) @ standalone ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom (4.5 kB at 1.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.pom (2.8 kB at 9.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.pom (1.7 kB at 5.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.19/plexus-components-1.1.19.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.19/plexus-components-1.1.19.pom (2.7 kB at 2.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.0.1/plexus-3.0.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.0.1/plexus-3.0.1.pom (19 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.pom (1.0 kB at 3.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.pom (9.9 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar (22 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.jar (60 kB at 44 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar (58 kB at 35 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar (38 kB at 20 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar (184 kB at 40 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.jar (208 kB at 38 kB/s)
+[INFO] Building jar: /home/training-machine5/docker-training-java/standalone/target/standalone-1.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.196 s
+[INFO] Finished at: 2019-08-20T12:35:26+05:30
+[INFO] ------------------------------------------------------------------------
+training-machine5@training-machine5:~/docker-training-java/standalone$ java -jar target/standalone-1.0.jar 
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:36:54 IST 2019 - Event: 0
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:36:57 IST 2019 - Event: 1
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:00 IST 2019 - Event: 2
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:03 IST 2019 - Event: 3
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:06 IST 2019 - Event: 4
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:09 IST 2019 - Event: 5
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:12 IST 2019 - Event: 6
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:15 IST 2019 - Event: 7
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:18 IST 2019 - Event: 8
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:21 IST 2019 - Event: 9
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:24 IST 2019 - Event: 10
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:27 IST 2019 - Event: 11
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:30 IST 2019 - Event: 12
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:33 IST 2019 - Event: 13
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:36 IST 2019 - Event: 14
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:39 IST 2019 - Event: 15
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:42 IST 2019 - Event: 16
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:45 IST 2019 - Event: 17
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:48 IST 2019 - Event: 18
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:51 IST 2019 - Event: 19
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:54 IST 2019 - Event: 20
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:37:57 IST 2019 - Event: 21
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:00 IST 2019 - Event: 22
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:03 IST 2019 - Event: 23
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:06 IST 2019 - Event: 24
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:09 IST 2019 - Event: 25
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:12 IST 2019 - Event: 26
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:15 IST 2019 - Event: 27
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:18 IST 2019 - Event: 28
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:21 IST 2019 - Event: 29
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:24 IST 2019 - Event: 30
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:27 IST 2019 - Event: 31
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:30 IST 2019 - Event: 32
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:33 IST 2019 - Event: 33
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:36 IST 2019 - Event: 34
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:39 IST 2019 - Event: 35
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:42 IST 2019 - Event: 36
+<EMP_ID>_<NAME> - Java version: 1.8.0_222: Tue Aug 20 12:38:45 IST 2019 - Event: 37
+^Z
+[1]+  Stopped                 java -jar target/standalone-1.0.jar
+training-machine5@training-machine5:~/docker-training-java/standalone$ java -jar target/
+Error: Invalid or corrupt jarfile target/
+training-machine5@training-machine5:~/docker-training-java/standalone$ clean compile jar:jar
+
+Command 'clean' not found, did you mean:
+
+  command 'uclean' from deb svn-buildpackage
+  command 'pclean' from deb pbuilder-scripts
+  command 'clear' from deb ncurses-bin
+
+Try: sudo apt install <deb name>
+
+training-machine5@training-machine5:~/docker-training-java/standalone$ compile jar:jar
+
+Command 'compile' not found, did you mean:
+
+  command 'compiler' from deb eclipse-titan
+
+Try: sudo apt install <deb name>
+
+training-machine5@training-machine5:~/docker-training-java/standalone$ compile jar
+
+Command 'compile' not found, did you mean:
+
+  command 'compiler' from deb eclipse-titan
+
+Try: sudo apt install <deb name>
+
+training-machine5@training-machine5:~/docker-training-java/standalone$ get status
+
+Command 'get' not found, but there are 18 similar ones.
+
+training-machine5@training-machine5:~/docker-training-java/standalone$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   src/main/java/zama/training/standalone/App.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+training-machine5@training-machine5:~/docker-training-java/standalone$ mvn clean compile jar:jar
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< zama.training:standalone >----------------------
+[INFO] Building Standalone java app 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ standalone ---
+[INFO] Deleting /home/training-machine5/docker-training-java/standalone/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ standalone ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ standalone ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/training-machine5/docker-training-java/standalone/target/classes
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-cli) @ standalone ---
+[INFO] Building jar: /home/training-machine5/docker-training-java/standalone/target/standalone-1.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.530 s
+[INFO] Finished at: 2019-08-20T12:42:36+05:30
+[INFO] ------------------------------------------------------------------------
+training-machine5@training-machine5:~/docker-training-java/standalone$ java -jar target/standalone-1.0.jar 
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:42:46 IST 2019 - Event: 0
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:42:49 IST 2019 - Event: 1
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:42:52 IST 2019 - Event: 2
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:42:55 IST 2019 - Event: 3
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:42:58 IST 2019 - Event: 4
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:01 IST 2019 - Event: 5
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:04 IST 2019 - Event: 6
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:07 IST 2019 - Event: 7
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:10 IST 2019 - Event: 8
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:13 IST 2019 - Event: 9
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:16 IST 2019 - Event: 10
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:19 IST 2019 - Event: 11
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:22 IST 2019 - Event: 12
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:25 IST 2019 - Event: 13
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:28 IST 2019 - Event: 14
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:31 IST 2019 - Event: 15
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:34 IST 2019 - Event: 16
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:37 IST 2019 - Event: 17
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:40 IST 2019 - Event: 18
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:43 IST 2019 - Event: 19
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:46 IST 2019 - Event: 20
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:49 IST 2019 - Event: 21
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:52 IST 2019 - Event: 22
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:55 IST 2019 - Event: 23
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:43:58 IST 2019 - Event: 24
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:01 IST 2019 - Event: 25
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:04 IST 2019 - Event: 26
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:07 IST 2019 - Event: 27
+591_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:10 IST 2019 - Event: 28
+^Z
+[2]+  Stopped                 java -jar target/standalone-1.0.jar
+training-machine5@training-machine5:~/docker-training-java/standalone$ mvn clean compile jar:jar
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< zama.training:standalone >----------------------
+[INFO] Building Standalone java app 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ standalone ---
+[INFO] Deleting /home/training-machine5/docker-training-java/standalone/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ standalone ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ standalone ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/training-machine5/docker-training-java/standalone/target/classes
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-cli) @ standalone ---
+[INFO] Building jar: /home/training-machine5/docker-training-java/standalone/target/standalone-1.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.548 s
+[INFO] Finished at: 2019-08-20T12:44:20+05:30
+[INFO] ------------------------------------------------------------------------
+training-machine5@training-machine5:~/docker-training-java/standalone$ java -jar target/standalone-1.0.jar 
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:25 IST 2019 - Event: 0
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:28 IST 2019 - Event: 1
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:31 IST 2019 - Event: 2
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:34 IST 2019 - Event: 3
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:37 IST 2019 - Event: 4
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:40 IST 2019 - Event: 5
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:43 IST 2019 - Event: 6
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:46 IST 2019 - Event: 7
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:49 IST 2019 - Event: 8
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:52 IST 2019 - Event: 9
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:55 IST 2019 - Event: 10
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:44:58 IST 2019 - Event: 11
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:45:01 IST 2019 - Event: 12
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:45:04 IST 2019 - Event: 13
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:45:07 IST 2019 - Event: 14
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 12:45:10 IST 2019 - Event: 15
+^Z
+[3]+  Stopped                 java -jar target/standalone-1.0.jar
+training-machine5@training-machine5:~/docker-training-java/standalone$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+training-machine5@training-machine5:~/docker-training-java/standalone$ git add .
+training-machine5@training-machine5:~/docker-training-java/standalone$ git commit -m "changed the emp id"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'training-machine5@training-machine5.(none)')
+training-machine5@training-machine5:~/docker-training-java/standalone$ 
+training-machine5@training-machine5:~/docker-training-java/standalone$ git config --global user.email "you@example.com"
+training-machine5@training-machine5:~/docker-training-java/standalone$ git config --global user.email "vasanthakumar.ss@gmail.com"
+training-machine5@training-machine5:~/docker-training-java/standalone$ git commit -m "changed the emp id"
+[master 367136f] changed the emp id
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+training-machine5@training-machine5:~/docker-training-java/standalone$ git push
+Username for 'https://github.com': vasanthakumar.ss@gmail.com
+Password for 'https://vasanthakumar.ss@gmail.com@github.com': 
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (10/10), 654 bytes | 654.00 KiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/VamukaGit/docker-training-java.git
+   420e255..367136f  master -> master
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+1b930d010525: Pull complete 
+Digest: sha256:6540fc08ee6e6b7b63468dc3317e3303aae178cb8a45ed3123180328bcc1d20f
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+training-machine5@training-machine5:~/docker-training-java/standalone$ ps -a
+  PID TTY          TIME CMD
+ 1465 tty1     00:00:00 gnome-session-b
+ 1475 tty1     00:00:07 gnome-shell
+ 1528 tty1     00:00:00 Xwayland
+ 1610 tty1     00:00:00 ibus-daemon
+ 1618 tty1     00:00:00 ibus-dconf
+ 1621 tty1     00:00:00 ibus-x11
+ 1647 tty1     00:00:00 gsd-xsettings
+ 1689 tty1     00:00:00 gsd-a11y-settin
+ 1690 tty1     00:00:00 gsd-clipboard
+ 1693 tty1     00:00:01 gsd-color
+ 1694 tty1     00:00:00 gsd-datetime
+ 1695 tty1     00:00:00 gsd-housekeepin
+ 1700 tty1     00:00:00 gsd-keyboard
+ 1706 tty1     00:00:00 gsd-media-keys
+ 1707 tty1     00:00:00 gsd-mouse
+ 1708 tty1     00:00:00 gsd-power
+ 1710 tty1     00:00:00 gsd-print-notif
+ 1712 tty1     00:00:00 gsd-rfkill
+ 1713 tty1     00:00:00 gsd-screensaver
+ 1718 tty1     00:00:00 gsd-sharing
+ 1720 tty1     00:00:00 gsd-smartcard
+ 1724 tty1     00:00:00 gsd-sound
+ 1729 tty1     00:00:00 gsd-wacom
+ 1749 tty1     00:00:00 ibus-engine-sim
+ 2261 tty2     00:01:33 Xorg
+ 2271 tty2     00:00:00 gnome-session-b
+ 2408 tty2     00:02:35 gnome-shell
+ 2430 tty2     00:00:07 ibus-daemon
+ 2434 tty2     00:00:00 ibus-dconf
+ 2436 tty2     00:00:00 ibus-x11
+ 2508 tty2     00:00:00 gsd-power
+ 2509 tty2     00:00:00 gsd-print-notif
+ 2511 tty2     00:00:00 gsd-rfkill
+ 2512 tty2     00:00:00 gsd-screensaver
+ 2518 tty2     00:00:00 gsd-sharing
+ 2522 tty2     00:00:00 gsd-smartcard
+ 2532 tty2     00:00:00 gsd-xsettings
+ 2541 tty2     00:00:00 gsd-sound
+ 2543 tty2     00:00:00 gsd-wacom
+ 2544 tty2     00:00:00 gsd-a11y-settin
+ 2545 tty2     00:00:00 gsd-clipboard
+ 2548 tty2     00:00:00 gsd-color
+ 2549 tty2     00:00:00 gsd-datetime
+ 2552 tty2     00:00:00 gsd-housekeepin
+ 2553 tty2     00:00:00 gsd-keyboard
+ 2558 tty2     00:00:00 gsd-media-keys
+ 2561 tty2     00:00:00 gsd-mouse
+ 2603 tty2     00:00:00 gsd-printer
+ 2618 tty2     00:00:01 nautilus-deskto
+ 2652 tty2     00:00:00 gsd-disk-utilit
+ 2684 tty2     00:00:02 ibus-engine-sim
+ 3429 tty2     00:00:00 update-notifier
+ 3477 tty2     00:00:00 deja-dup-monito
+ 3812 tty2     00:03:48 firefox
+ 3893 tty2     00:01:42 Web Content
+ 3958 tty2     00:00:34 Web Content
+ 4032 tty2     00:00:18 WebExtensions
+ 4679 tty2     00:00:00 oosplash
+ 4746 tty2     00:00:04 soffice.bin
+ 5360 pts/0    00:00:00 java
+ 5626 pts/0    00:00:00 java
+ 5707 pts/0    00:00:00 java
+ 5796 tty2     00:00:11 Web Content
+ 5827 tty2     00:00:03 Web Content
+ 6110 pts/0    00:00:00 ps
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker build -t java8-app .
+Sending build context to Docker daemon   34.3kB
+Step 1/3 : FROM openjdk:8
+8: Pulling from library/openjdk
+9cc2ad81d40d: Pull complete 
+e6cb98e32a52: Pull complete 
+ae1b8d879bad: Pull complete 
+42cfa3699b05: Downloading [===========================>                       ]  27.98MB/50.07MB
+8d27062ef0ea: Download complete 
+42cfa3699b05: Downloading [============================>                      ]  28.49MB/50.07MB
+42cfa3699b05: Pull complete 
+8d27062ef0ea: Pull complete 
+9b91647396e3: Pull complete 
+7498c1055ea3: Pull complete 
+Digest: sha256:0a16427b68dfaea1ba1d6e462de940580d72549a694dd6cab82ce16ef9edfe66
+Status: Downloaded newer image for openjdk:8
+ ---> 08ded5f856cc
+Step 2/3 : ADD target/standalone-1.0.jar /standalone-1.0.jar
+ ---> a43b4d69b12e
+Step 3/3 : CMD ["java","-jar","/standalone-1.0.jar"]
+ ---> Running in 4d02b754669b
+Removing intermediate container 4d02b754669b
+ ---> b3dc9e167bea
+Successfully built b3dc9e167bea
+Successfully tagged java8-app:latest
+training-machine5@training-machine5:~/docker-training-java/standalone$ 
+training-machine5@training-machine5:~/docker-training-java/standalone$ 
+training-machine5@training-machine5:~/docker-training-java/standalone$ 
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+java8-app           latest              b3dc9e167bea        30 seconds ago      488MB
+openjdk             8                   08ded5f856cc        5 days ago          488MB
+hello-world         latest              fce289e99eb9        7 months ago        1.84kB
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker build -t java8-app_test .
+Sending build context to Docker daemon   34.3kB
+Step 1/3 : FROM openjdk:8
+ ---> 08ded5f856cc
+Step 2/3 : ADD target/standalone-1.0.jar /standalone-1.0.jar
+ ---> Using cache
+ ---> a43b4d69b12e
+Step 3/3 : CMD ["java","-jar","/standalone-1.0.jar"]
+ ---> Using cache
+ ---> b3dc9e167bea
+Successfully built b3dc9e167bea
+Successfully tagged java8-app_test:latest
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+java8-app_test      latest              b3dc9e167bea        3 minutes ago       488MB
+java8-app           latest              b3dc9e167bea        3 minutes ago       488MB
+openjdk             8                   08ded5f856cc        5 days ago          488MB
+hello-world         latest              fce289e99eb9        7 months ago        1.84kB
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker run --name java8-app-c1 java8-app 
+
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:35:58 UTC 2019 - Event: 0
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:01 UTC 2019 - Event: 1
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:04 UTC 2019 - Event: 2
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:07 UTC 2019 - Event: 3
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:10 UTC 2019 - Event: 4
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:13 UTC 2019 - Event: 5
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:16 UTC 2019 - Event: 6
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:19 UTC 2019 - Event: 7
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:22 UTC 2019 - Event: 8
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:25 UTC 2019 - Event: 9
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:28 UTC 2019 - Event: 10
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:31 UTC 2019 - Event: 11
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:34 UTC 2019 - Event: 12
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:37 UTC 2019 - Event: 13
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:40 UTC 2019 - Event: 14
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:43 UTC 2019 - Event: 15
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:46 UTC 2019 - Event: 16
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:49 UTC 2019 - Event: 17
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:52 UTC 2019 - Event: 18
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:55 UTC 2019 - Event: 19
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:36:58 UTC 2019 - Event: 20
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:01 UTC 2019 - Event: 21
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:04 UTC 2019 - Event: 22
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:07 UTC 2019 - Event: 23
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:10 UTC 2019 - Event: 24
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:13 UTC 2019 - Event: 25
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:16 UTC 2019 - Event: 26
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:19 UTC 2019 - Event: 27
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:22 UTC 2019 - Event: 28
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:25 UTC 2019 - Event: 29
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:28 UTC 2019 - Event: 30
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:31 UTC 2019 - Event: 31
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:34 UTC 2019 - Event: 32
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:37 UTC 2019 - Event: 33
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:40 UTC 2019 - Event: 34
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:43 UTC 2019 - Event: 35
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:46 UTC 2019 - Event: 36
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:49 UTC 2019 - Event: 37
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:52 UTC 2019 - Event: 38
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:55 UTC 2019 - Event: 39
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:37:58 UTC 2019 - Event: 40
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:01 UTC 2019 - Event: 41
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:04 UTC 2019 - Event: 42
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:07 UTC 2019 - Event: 43
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:10 UTC 2019 - Event: 44
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:13 UTC 2019 - Event: 45
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:16 UTC 2019 - Event: 46
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:19 UTC 2019 - Event: 47
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:22 UTC 2019 - Event: 48
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:25 UTC 2019 - Event: 49
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:28 UTC 2019 - Event: 50
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:31 UTC 2019 - Event: 51
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:34 UTC 2019 - Event: 52
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:37 UTC 2019 - Event: 53
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:40 UTC 2019 - Event: 54
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:43 UTC 2019 - Event: 55
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:46 UTC 2019 - Event: 56
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:49 UTC 2019 - Event: 57
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:52 UTC 2019 - Event: 58
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:55 UTC 2019 - Event: 59
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:38:58 UTC 2019 - Event: 60
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:01 UTC 2019 - Event: 61
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:04 UTC 2019 - Event: 62
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:07 UTC 2019 - Event: 63
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:10 UTC 2019 - Event: 64
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:13 UTC 2019 - Event: 65
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:16 UTC 2019 - Event: 66
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:19 UTC 2019 - Event: 67
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:22 UTC 2019 - Event: 68
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:25 UTC 2019 - Event: 69
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:28 UTC 2019 - Event: 70
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:31 UTC 2019 - Event: 71
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:34 UTC 2019 - Event: 72
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:37 UTC 2019 - Event: 73
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:40 UTC 2019 - Event: 74
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:43 UTC 2019 - Event: 75
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:46 UTC 2019 - Event: 76
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:49 UTC 2019 - Event: 77
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:52 UTC 2019 - Event: 78
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:55 UTC 2019 - Event: 79
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:39:58 UTC 2019 - Event: 80
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:01 UTC 2019 - Event: 81
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:04 UTC 2019 - Event: 82
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:07 UTC 2019 - Event: 83
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:10 UTC 2019 - Event: 84
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:13 UTC 2019 - Event: 85
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:16 UTC 2019 - Event: 86
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:19 UTC 2019 - Event: 87
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:22 UTC 2019 - Event: 88
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:25 UTC 2019 - Event: 89
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:28 UTC 2019 - Event: 90
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:31 UTC 2019 - Event: 91
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:34 UTC 2019 - Event: 92
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:37 UTC 2019 - Event: 93
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:40 UTC 2019 - Event: 94
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:43 UTC 2019 - Event: 95
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:46 UTC 2019 - Event: 96
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:49 UTC 2019 - Event: 97
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:52 UTC 2019 - Event: 98
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:55 UTC 2019 - Event: 99
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:40:58 UTC 2019 - Event: 100
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:01 UTC 2019 - Event: 101
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:04 UTC 2019 - Event: 102
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:07 UTC 2019 - Event: 103
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:10 UTC 2019 - Event: 104
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:13 UTC 2019 - Event: 105
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:16 UTC 2019 - Event: 106
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:19 UTC 2019 - Event: 107
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:22 UTC 2019 - Event: 108
+^Ctraining-machine5@training-machine5:~/docker-training-java/standalone$ 
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker run -d java8-app 
+5b52603c7a3ee3c6c471047f78213c6627d1c3b9860138d5c5e605f4e86fc8ac
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker run -d java8-app 
+0a661391650413453e26b46e111b86834495f0d9dc2d218b8abcd44b64526a64
+^[[Atraining-machine5@training-machine5:~/docker-training-java/standalone$ docker run -d java8-app 
+2059a0081b2e3cbeadb8137d6065f43126af0496dc3e9cb3ba146ba4617a8e9d
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker logs  -d docker run --name java8-app-c1 java8-app 
+unknown shorthand flag: 'd' in -d
+See 'docker logs --help'.
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker logs  -d frosty_beaver
+unknown shorthand flag: 'd' in -d
+See 'docker logs --help'.
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker logs -f frosty_beaver
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:36 UTC 2019 - Event: 0
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:39 UTC 2019 - Event: 1
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:42 UTC 2019 - Event: 2
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:45 UTC 2019 - Event: 3
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:48 UTC 2019 - Event: 4
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:51 UTC 2019 - Event: 5
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:54 UTC 2019 - Event: 6
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:41:57 UTC 2019 - Event: 7
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:00 UTC 2019 - Event: 8
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:03 UTC 2019 - Event: 9
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:06 UTC 2019 - Event: 10
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:09 UTC 2019 - Event: 11
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:12 UTC 2019 - Event: 12
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:15 UTC 2019 - Event: 13
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:18 UTC 2019 - Event: 14
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:21 UTC 2019 - Event: 15
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:24 UTC 2019 - Event: 16
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:27 UTC 2019 - Event: 17
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:30 UTC 2019 - Event: 18
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:33 UTC 2019 - Event: 19
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:36 UTC 2019 - Event: 20
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:39 UTC 2019 - Event: 21
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:42 UTC 2019 - Event: 22
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:45 UTC 2019 - Event: 23
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:48 UTC 2019 - Event: 24
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:51 UTC 2019 - Event: 25
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:54 UTC 2019 - Event: 26
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:42:57 UTC 2019 - Event: 27
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:43:00 UTC 2019 - Event: 28
+592_SVK- Java version: 1.8.0_222: Tue Aug 20 07:43:03 UTC 2019 - Event: 29
+^Z
+[4]+  Stopped                 docker logs -f frosty_beaver
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker build -t java8-app_test .^C
+training-machine5@training-machine5:~/docker-training-java/standalone$ 
+
