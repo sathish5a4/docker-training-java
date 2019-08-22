@@ -1,0 +1,27 @@
+training-machine5@training-machine5:~$ docker-compose ps
+ERROR: 
+        Can't find a suitable configuration file in this directory or any
+        parent. Are you in the right directory?
+
+        Supported filenames: docker-compose.yml, docker-compose.yaml
+        
+training-machine5@training-machine5:~$ cd docker-training-java/
+training-machine5@training-machine5:~/docker-training-java$ cd standalone/
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose ps
+         Name                        Command              State   Ports
+-----------------------------------------------------------------------
+standalone_standalone_1   java -jar /standalone-1.0.jar   Up           
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose ps
+         Name                        Command               State     Ports
+--------------------------------------------------------------------------
+standalone_standalone_1   java -jar /standalone-1.0.jar   Exit 143        
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose ps
+         Name                        Command              State   Ports
+-----------------------------------------------------------------------
+standalone_standalone_1   java -jar /standalone-1.0.jar   Up           
+standalone_standalone_2   java -jar /standalone-1.0.jar   Up           
+standalone_standalone_3   java -jar /standalone-1.0.jar   Up           
+standalone_standalone_4   java -jar /standalone-1.0.jar   Up           
+standalone_standalone_5   java -jar /standalone-1.0.jar   Up           
+training-machine5@training-machine5:~/docker-training-java/standalone$ 
+

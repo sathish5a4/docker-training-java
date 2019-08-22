@@ -1,0 +1,323 @@
+1]
+2019-08-22 06:47:24.241  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-22 06:47:24.242  INFO 1 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2626 ms
+2019-08-22 06:47:24.730  INFO 1 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-22 06:47:25.205  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-08-22 06:47:25.212  INFO 1 --- [           main] z.training.springboot.DemoApplication    : Started DemoApplication in 4.709 seconds (JVM running for 5.629)
+2019-08-22 06:48:02.447  INFO 1 --- [nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-22 06:48:02.447  INFO 1 --- [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-22 06:48:02.459  INFO 1 --- [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-08-22 06:48:02.540  INFO 1 --- [nio-8085-exec-1] z.training.springboot.DemoApplication    : Processing request for /greet --> Learner
+2019-08-22 06:48:10.575  INFO 1 --- [nio-8085-exec-3] z.training.springboot.DemoApplication    : Processing request for /greet --> sathish
+^C2019-08-22 06:48:19.748  INFO 1 --- [       Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+^Ctraining-machine5@training-machine5:~/docker-training-java/spring-boot$ cd ..
+training-machine5@training-machine5:~/docker-training-java$ cd standalone/
+training-machine5@training-machine5:~/docker-training-java/standalone$ l s-l
+ls: cannot access 's-l': No such file or directory
+training-machine5@training-machine5:~/docker-training-java/standalone$ ls -l
+total 44
+-rw-r--r-- 1 training-machine5 training-machine5   60 Aug 21 13:16 add.sh
+drwxr-xr-x 2 training-machine5 training-machine5 4096 Aug 21 13:27 data
+-rw-r--r-- 1 training-machine5 training-machine5  116 Aug 20 12:23 docker-compose.yml
+-rw-r--r-- 1 training-machine5 training-machine5  129 Aug 21 13:29 Dockerfile
+-rw-r--r-- 1 training-machine5 training-machine5  107 Aug 20 12:23 Dockerfile-10
+-rw-r--r-- 1 training-machine5 training-machine5  107 Aug 20 12:23 Dockerfile-11
+-rw-r--r-- 1 training-machine5 training-machine5  106 Aug 20 12:23 Dockerfile-9
+-rw-r--r-- 1 training-machine5 training-machine5 1518 Aug 20 13:44 pom.xml
+-rw-r--r-- 1 training-machine5 training-machine5   50 Aug 21 12:47 run.sh
+drwxr-xr-x 3 training-machine5 training-machine5 4096 Aug 20 12:23 src
+drwxr-xr-x 7 training-machine5 training-machine5 4096 Aug 20 13:53 target
+training-machine5@training-machine5:~/docker-training-java/standalone$ clear
+
+training-machine5@training-machine5:~/docker-training-java/standalone$ ls -l
+total 44
+-rw-r--r-- 1 training-machine5 training-machine5   60 Aug 21 13:16 add.sh
+drwxr-xr-x 2 training-machine5 training-machine5 4096 Aug 21 13:27 data
+-rw-r--r-- 1 training-machine5 training-machine5  116 Aug 20 12:23 docker-compose.yml
+-rw-r--r-- 1 training-machine5 training-machine5  129 Aug 21 13:29 Dockerfile
+-rw-r--r-- 1 training-machine5 training-machine5  107 Aug 20 12:23 Dockerfile-10
+-rw-r--r-- 1 training-machine5 training-machine5  107 Aug 20 12:23 Dockerfile-11
+-rw-r--r-- 1 training-machine5 training-machine5  106 Aug 20 12:23 Dockerfile-9
+-rw-r--r-- 1 training-machine5 training-machine5 1518 Aug 20 13:44 pom.xml
+-rw-r--r-- 1 training-machine5 training-machine5   50 Aug 21 12:47 run.sh
+drwxr-xr-x 3 training-machine5 training-machine5 4096 Aug 20 12:23 src
+drwxr-xr-x 7 training-machine5 training-machine5 4096 Aug 20 13:53 target
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose build
+Building standalone
+Step 1/4 : FROM openjdk:8
+ ---> 08ded5f856cc
+Step 2/4 : ADD target/standalone-1.0.jar /standalone-1.0.jar
+ ---> 5bc3391e392e
+Step 3/4 : ADD data/add.tar.xz .
+ ---> 2e50a6f48518
+Step 4/4 : CMD ["java","-jar","/standalone-1.0.jar"]
+ ---> Running in 6501fa356162
+Removing intermediate container 6501fa356162
+ ---> f1b0e6e28a14
+Successfully built f1b0e6e28a14
+Successfully tagged java8-app:latest
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose up
+Creating network "standalone_default" with the default driver
+Creating standalone_standalone_1 ... 
+Creating standalone_standalone_1 ... done
+Attaching to standalone_standalone_1
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:36 UTC 2019 - Event: 0
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:39 UTC 2019 - Event: 1
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:42 UTC 2019 - Event: 2
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:45 UTC 2019 - Event: 3
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:48 UTC 2019 - Event: 4
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:51 UTC 2019 - Event: 5
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:54 UTC 2019 - Event: 6
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:57 UTC 2019 - Event: 7
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:01:00 UTC 2019 - Event: 8
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:01:03 UTC 2019 - Event: 9
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping standalone_standalone_1 ... done
+training-machine5@training-machine5:~/docker-training-java/standalone$ sudo apt install docker-compose
+[sudo] password for training-machine5: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+docker-compose is already the newest version (1.17.1-2).
+0 upgraded, 0 newly installed, 0 to remove and 404 not upgraded.
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose ps
+         Name                        Command               State     Ports
+--------------------------------------------------------------------------
+standalone_standalone_1   java -jar /standalone-1.0.jar   Exit 143        
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose up -d
+Starting standalone_standalone_1 ... 
+Starting standalone_standalone_1 ... done
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose ps
+         Name                        Command              State   Ports
+-----------------------------------------------------------------------
+standalone_standalone_1   java -jar /standalone-1.0.jar   Up           
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose scale standalone=5
+WARNING: The scale command is deprecated. Use the up command with the --scale flag instead.
+Starting standalone_standalone_1 ... done
+Creating standalone_standalone_2 ... 
+Creating standalone_standalone_3 ... 
+Creating standalone_standalone_4 ... 
+Creating standalone_standalone_5 ... 
+Creating standalone_standalone_2 ... done
+Creating standalone_standalone_3 ... done
+Creating standalone_standalone_4 ... done
+Creating standalone_standalone_5 ... done
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+626ce2b76c14        java8-app           "java -jar /standalo…"   15 seconds ago      Up 11 seconds                           standalone_standalone_5
+aeb7856f8ea3        java8-app           "java -jar /standalo…"   15 seconds ago      Up 12 seconds                           standalone_standalone_3
+63bd3b7e4870        java8-app           "java -jar /standalo…"   15 seconds ago      Up 10 seconds                           standalone_standalone_2
+cbc29a97b24c        java8-app           "java -jar /standalo…"   15 seconds ago      Up 10 seconds                           standalone_standalone_4
+8b508740bb0a        java8-app           "java -jar /standalo…"   5 minutes ago       Up About a minute                       standalone_standalone_1
+f822eae26850        bcfd9b6b1420        "java -jar /standalo…"   23 hours ago        Up 23 hours                             java8-data
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker logs -f standalone_standalone
+Error: No such container: standalone_standalone
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker logs -f standalone_standalone_1
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:36 UTC 2019 - Event: 0
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:39 UTC 2019 - Event: 1
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:42 UTC 2019 - Event: 2
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:45 UTC 2019 - Event: 3
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:48 UTC 2019 - Event: 4
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:51 UTC 2019 - Event: 5
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:54 UTC 2019 - Event: 6
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:00:57 UTC 2019 - Event: 7
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:01:00 UTC 2019 - Event: 8
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:01:03 UTC 2019 - Event: 9
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:08 UTC 2019 - Event: 0
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:11 UTC 2019 - Event: 1
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:14 UTC 2019 - Event: 2
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:17 UTC 2019 - Event: 3
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:20 UTC 2019 - Event: 4
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:23 UTC 2019 - Event: 5
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:26 UTC 2019 - Event: 6
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:29 UTC 2019 - Event: 7
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:32 UTC 2019 - Event: 8
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:35 UTC 2019 - Event: 9
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:38 UTC 2019 - Event: 10
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:41 UTC 2019 - Event: 11
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:44 UTC 2019 - Event: 12
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:47 UTC 2019 - Event: 13
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:50 UTC 2019 - Event: 14
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:53 UTC 2019 - Event: 15
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:56 UTC 2019 - Event: 16
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:04:59 UTC 2019 - Event: 17
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:02 UTC 2019 - Event: 18
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:05 UTC 2019 - Event: 19
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:08 UTC 2019 - Event: 20
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:11 UTC 2019 - Event: 21
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:14 UTC 2019 - Event: 22
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:17 UTC 2019 - Event: 23
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:20 UTC 2019 - Event: 24
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:23 UTC 2019 - Event: 25
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:26 UTC 2019 - Event: 26
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:29 UTC 2019 - Event: 27
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:32 UTC 2019 - Event: 28
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:35 UTC 2019 - Event: 29
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:38 UTC 2019 - Event: 30
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:41 UTC 2019 - Event: 31
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:44 UTC 2019 - Event: 32
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:47 UTC 2019 - Event: 33
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:50 UTC 2019 - Event: 34
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:53 UTC 2019 - Event: 35
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:56 UTC 2019 - Event: 36
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:05:59 UTC 2019 - Event: 37
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:02 UTC 2019 - Event: 38
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:05 UTC 2019 - Event: 39
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:08 UTC 2019 - Event: 40
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:11 UTC 2019 - Event: 41
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:14 UTC 2019 - Event: 42
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:17 UTC 2019 - Event: 43
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:20 UTC 2019 - Event: 44
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:23 UTC 2019 - Event: 45
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:26 UTC 2019 - Event: 46
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:29 UTC 2019 - Event: 47
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:32 UTC 2019 - Event: 48
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:35 UTC 2019 - Event: 49
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:38 UTC 2019 - Event: 50
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:41 UTC 2019 - Event: 51
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:44 UTC 2019 - Event: 52
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:47 UTC 2019 - Event: 53
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:50 UTC 2019 - Event: 54
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:53 UTC 2019 - Event: 55
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:56 UTC 2019 - Event: 56
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:06:59 UTC 2019 - Event: 57
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:02 UTC 2019 - Event: 58
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:05 UTC 2019 - Event: 59
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:08 UTC 2019 - Event: 60
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:11 UTC 2019 - Event: 61
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:14 UTC 2019 - Event: 62
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:17 UTC 2019 - Event: 63
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:20 UTC 2019 - Event: 64
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:23 UTC 2019 - Event: 65
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:26 UTC 2019 - Event: 66
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:29 UTC 2019 - Event: 67
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:32 UTC 2019 - Event: 68
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:35 UTC 2019 - Event: 69
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:38 UTC 2019 - Event: 70
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:41 UTC 2019 - Event: 71
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:44 UTC 2019 - Event: 72
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:47 UTC 2019 - Event: 73
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:50 UTC 2019 - Event: 74
+592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:07:53 UTC 2019 - Event: 75
+^C
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+626ce2b76c14        java8-app           "java -jar /standalo…"   2 minutes ago       Up 2 minutes                            standalone_standalone_5
+aeb7856f8ea3        java8-app           "java -jar /standalo…"   2 minutes ago       Up 2 minutes                            standalone_standalone_3
+63bd3b7e4870        java8-app           "java -jar /standalo…"   2 minutes ago       Up 2 minutes                            standalone_standalone_2
+cbc29a97b24c        java8-app           "java -jar /standalo…"   2 minutes ago       Up 2 minutes                            standalone_standalone_4
+8b508740bb0a        java8-app           "java -jar /standalo…"   7 minutes ago       Up 4 minutes                            standalone_standalone_1
+f822eae26850        bcfd9b6b1420        "java -jar /standalo…"   23 hours ago        Up 23 hours                             java8-data
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose down
+Stopping standalone_standalone_5 ... done
+Stopping standalone_standalone_3 ... done
+Stopping standalone_standalone_2 ... done
+Stopping standalone_standalone_4 ... done
+Stopping standalone_standalone_1 ... done
+Removing standalone_standalone_5 ... done
+Removing standalone_standalone_3 ... done
+Removing standalone_standalone_2 ... done
+Removing standalone_standalone_4 ... done
+Removing standalone_standalone_1 ... done
+Removing network standalone_default
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose up
+Creating network "standalone_default" with the default driver
+Creating standalone_standalone_1 ... 
+Creating standalone_standalone_1 ... done
+Attaching to standalone_standalone_1
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:07 UTC 2019 - Event: 0
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:10 UTC 2019 - Event: 1
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:13 UTC 2019 - Event: 2
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:16 UTC 2019 - Event: 3
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:19 UTC 2019 - Event: 4
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:22 UTC 2019 - Event: 5
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:25 UTC 2019 - Event: 6
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:28 UTC 2019 - Event: 7
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:31 UTC 2019 - Event: 8
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:34 UTC 2019 - Event: 9
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:37 UTC 2019 - Event: 10
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:40 UTC 2019 - Event: 11
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:43 UTC 2019 - Event: 12
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:46 UTC 2019 - Event: 13
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:49 UTC 2019 - Event: 14
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:52 UTC 2019 - Event: 15
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:55 UTC 2019 - Event: 16
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:09:58 UTC 2019 - Event: 17
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:01 UTC 2019 - Event: 18
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:04 UTC 2019 - Event: 19
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:07 UTC 2019 - Event: 20
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:10 UTC 2019 - Event: 21
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:13 UTC 2019 - Event: 22
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:16 UTC 2019 - Event: 23
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:19 UTC 2019 - Event: 24
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:22 UTC 2019 - Event: 25
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:25 UTC 2019 - Event: 26
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:28 UTC 2019 - Event: 27
+standalone_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:10:31 UTC 2019 - Event: 28
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping standalone_standalone_1 ... done
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose scale standalone=5
+WARNING: The scale command is deprecated. Use the up command with the --scale flag instead.
+Starting standalone_standalone_1 ... 
+Starting standalone_standalone_1 ... done
+Creating standalone_standalone_2 ... 
+Creating standalone_standalone_3 ... 
+Creating standalone_standalone_4 ... 
+Creating standalone_standalone_5 ... 
+Creating standalone_standalone_2 ... done
+Creating standalone_standalone_3 ... done
+Creating standalone_standalone_4 ... done
+Creating standalone_standalone_5 ... done
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose down
+Stopping standalone_standalone_5 ... done
+Stopping standalone_standalone_3 ... done
+Stopping standalone_standalone_4 ... done
+Stopping standalone_standalone_2 ... done
+Stopping standalone_standalone_1 ... done
+Removing standalone_standalone_5 ... done
+Removing standalone_standalone_3 ... done
+Removing standalone_standalone_4 ... done
+Removing standalone_standalone_2 ... done
+Removing standalone_standalone_1 ... done
+Removing network standalone_default
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose scale web=5
+WARNING: The scale command is deprecated. Use the up command with the --scale flag instead.
+ERROR: No such service: web
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose scale 5
+WARNING: The scale command is deprecated. Use the up command with the --scale flag instead.
+ERROR: Arguments to scale should be in the form service=num
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose up
+Creating network "standalone_default" with the default driver
+Creating standalone_standalone-test_1 ... 
+Creating standalone_standalone_1 ... 
+Creating standalone_standalone-test_1
+Creating standalone_standalone_1 ... done
+Attaching to standalone_standalone-test_1, standalone_standalone_1
+standalone-test_1  | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:13:54 UTC 2019 - Event: 0
+standalone_1       | 592_SVK- Java version: 1.8.0_222: Thu Aug 22 07:13:54 UTC 2019 - Event: 0
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping standalone_standalone-test_1 ... done
+Stopping standalone_standalone_1      ... done
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose down
+Removing standalone_standalone-test_1 ... done
+Removing standalone_standalone_1      ... done
+Removing network standalone_default
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose scale standalone=2 standalone-test=3
+WARNING: The scale command is deprecated. Use the up command with the --scale flag instead.
+Creating standalone_standalone-test_1 ... 
+Creating standalone_standalone-test_2 ... 
+Creating standalone_standalone-test_3 ... 
+Creating standalone_standalone-test_1 ... error
+Creating standalone_standalone-test_2 ... error
+Creating standalone_standalone-test_3 ... error
+
+ERROR: for standalone_standalone-test_3  Cannot start service standalone-test: network standalone_default not found
+
+ERROR: for standalone_standalone-test_2  Cannot start service standalone-test: network standalone_default not found
+
+ERROR: for standalone_standalone-test_1  Cannot start service standalone-test: network standalone_default not found
+ERROR: Cannot start service standalone-test: network standalone_default not found
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose scale standalone=2 standalone-test=3
+ERROR: Service "standalone-test" uses an undefined network "my-network-standalone-test"
+training-machine5@training-machine5:~/docker-training-java/standalone$ docker-compose scale standalone=2 standalone-test=3
+
